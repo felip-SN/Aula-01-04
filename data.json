@@ -1,0 +1,64 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "José Maria",
+      "course": "Computação"
+    },
+    {
+      "id": 2,
+      "name": "Fernanda Silva",
+      "course": "Computação"
+    },
+    {
+      "id": 3,
+      "name": "Mario Antunes",
+      "course": "Matemática"
+    },
+    {
+      "id": 4,
+      "name": "asdas",
+      "course": "12321321"
+    },
+    {
+      "id": 5,
+      "name": "234324234",
+      "course": "234423432432"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "ADS",
+      "price": 10,
+      "active": true,
+      "promotion": true
+    },
+    {
+      "id": 2,
+      "name": "Administração",
+      "price": 1500,
+      "promotion": true
+    },
+    {
+      "id": 3,
+      "name": "Administração",
+      "price": 1,
+      "promotion": null
+    },
+    {
+      "id": 4,
+      "name": null,
+      "price": null,
+      "active": "active",
+      "promotion": null
+    },
+    {
+      "id": 5,
+      "name": "Administração",
+      "price": 1500,
+      "active": "active",
+      "promotion": true
+    }
+  ]
+}

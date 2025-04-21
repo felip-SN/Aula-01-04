@@ -1,0 +1,56 @@
+<div class="container bg-light p-4">
+    <div class="row">
+        <div class="col-7 m-auto">
+            <h1 class="text-center">Cadastro de Cursos</h1>
+            <form [formGroup]="formGroupCourse">
+                <div class="row g-3">
+                    <div class="mb-3 col-auto">
+                        <label for="inputName" class="form-label">Nome</label>
+                        <input  formControlName="name" type="text" class="form-control" id="inputName" aria-describedby="nameHelp">
+                        <div id="nameHelp" class="form-text">Digite o seu nome</div>
+                    </div>
+                    <div class="mb-3 col-auto">
+                        <label for="inputCourse" class="form-label">Preço</label>
+                        <input formControlName="price"  type="number" class="form-control" id="inputCourse" aria-describedby="courseHelp">
+                        <div id="courseHelp" class="form-text">Digite o preço do curso</div>
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" formControlName="active" value="active" type="radio" name="active" id="radioDefault1">
+                    <label class="form-check-label" for="radioDefault1">
+                      Ativo
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" formControlName="promotion" name="promotion" type="checkbox" value="" id="checkDefault">
+                    <label class="form-check-label" for="checkDefault">
+                      Promoção
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="postCourse()">Salvar</button>
+            </form>
+            <h2 class="text-center">Cursos Cadastrados</h2>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Ativo</th>
+                    <th scope="col">Promoção</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let c of courses">
+                    <th scope="row">{{c.id}}</th>
+                    <td>{{c.name}}</td>
+                    <td>R$ {{c.price}}</td>
+                    <td>{{ c.active ? 'Ativo' : 'Inativo' }}</td>
+                    <td>{{c.promotion ? 'Promoção' : 'Sem promoção'}}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>
+    </div>
+</div>
