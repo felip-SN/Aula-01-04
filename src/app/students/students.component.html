@@ -22,19 +22,54 @@
                     <th scope="col">Id</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Curso</th>
+                    <th scope="col">Remover</th>
+                    <th scope="col">Atualizar</th>
                   </tr>
                 </thead>
                 <tbody>
-                    
+
                   <tr *ngFor="let s of students">
                     <th scope="row">{{s.id}}</th>
                     <td>{{s.name}}</td>
                     <td>{{s.course}}</td>
+                    <td>
+                      <span class="badge text-bg-danger" (click)="delete(s)">Remover</span>
+                    </td>
+                    <td>
+                      <span class="badge text-bg-warning" (click)="clickUpdate(s)" (click)="open(content)">Atualizar</span>
+                    </td>
                   </tr>
-                 
+
                 </tbody>
               </table>
-
         </div>
     </div>
 </div>
+
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Atualizar dados do aluno</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+    <form [formGroup]="formGroupStudentEdit"  >
+      <div class="mb-3">
+          <label for="inputName" class="form-label">Nome</label>
+          <input  formControlName="name" type="text" class="form-control" id="inputName" aria-describedby="nameHelp">
+          <div id="nameHelp" class="form-text">Digite o seu nome</div>
+      </div>
+      <div class="mb-3">
+          <label for="inputCourse" class="form-label">Curso</label>
+          <input formControlName="course"  type="text" class="form-control" id="inputCourse" aria-describedby="courseHelp">
+          <div id="courseHelp" class="form-text">Digite o nome do curso</div>
+      </div>
+  </form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-secondary" (click)="update()" (click)="modal.close()">Save</button>
+	</div>
+</ng-template>
+
+<hr />
+
+<pre>{{ closeResult() }}</pre>
