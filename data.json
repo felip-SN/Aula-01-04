@@ -1,19 +1,9 @@
 {
   "students": [
     {
-      "id": 1,
-      "name": "José Maria",
-      "course": "Computação"
-    },
-    {
-      "id": 2,
-      "name": "Fernanda Silva",
-      "course": "Computação"
-    },
-    {
       "id": 3,
-      "name": "Mario Antunes",
-      "course": "Matemática"
+      "name": "Maria Antonieta",
+      "course": "Advogada"
     },
     {
       "id": 4,
@@ -22,8 +12,8 @@
     },
     {
       "id": 5,
-      "name": "234324234",
-      "course": "234423432432"
+      "name": "Felipe Santos Nascimento",
+      "course": "Análise e Desenvolvimento de Sistemas"
     }
   ],
   "courses": [
